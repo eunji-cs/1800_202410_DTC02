@@ -1,1 +1,17 @@
+.navbar-brand{
+  font-family: 'Source Serif 4', cursive; /*change the font name for what you have*/
+  font-size: 2.25rem;
+  color: #fff;
+  background-color: #6B8054;
+}
+
+nav {
+  background-color: #6B8054;
+}
+
+#theme-color{
+  background-color: #6B8054;
+  color: #fff;
+}
+
 
