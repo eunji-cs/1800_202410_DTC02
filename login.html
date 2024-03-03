@@ -29,7 +29,8 @@
                         },
                         //  Add custom colors here.
                         colors: {
-                        }
+                            TitleColor:'#6B685E'
+                        },
                     }
                 }
             }
@@ -38,11 +39,20 @@
         <title>Neighbourly</title>
     </head>
 <body>
-    <h1>Login Page!</h1>
-
-    <div id="firebaseui-auth-container"></div>
-    <div id="loader">Loading...</div>
-
+    
+    <div class="h-screen flex flex-col items-center justify-center bg-[url('./images/login-background.jpg')] overflow-hidden rounded-lg bg-cover bg-no-repeat">
+        <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm">
+            <div class="flex flex-col space-y-5 text-center text-black">
+                <h1 class="text-6xl">Neighbourly</h1>
+                <p class="text-sm">This is a very cool project!</p>
+            </div>
+        
+            <div class="flex py-20">
+                <div id="firebaseui-auth-container"></div>
+                <div id="loader">Loading...</div>
+            </div>
+        </div>
+    </div>
 
     <!-- Javascript Functions -->
     <script src="./scripts/firebaseAPI_DTC02.js"></script>
