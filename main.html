@@ -38,12 +38,14 @@
       extend: {
         //  Add custom fonts here.   
         fontFamily: {
-          sans: ['Nunito', 'sans-serif'],
-          serif: ['Source Serif Pro', 'serif'],
-          mono: ['Orbitron', 'monospace'],
+          Nunito: ['Nunito', 'sans-serif'],
+          sourceSerif: ['Source Serif Pro', 'serif'],
+          Orbitron: ['Orbitron', 'monospace'],
         },
         //  Add custom colors here.
         colors: {
+          mainColor: '#6B8054',
+          buttonHover: '#778f5d',
         }
       }
     }
@@ -67,7 +69,10 @@
         <h5 class="font-sans text-xl font-semibold">Hi, <span id="name-goes-here"></span></h1>
           <p class="text-[#6B685E]">Welcome to Neighbourly!</p>
       </div>
+      <div class="flex self-center pr-5">
+        <a class="bg-mainColor hover:bg-buttonHover p-3 rounded-md text-white font-sans font-semibold" href="./login.html">Logout</a>
     </div>
+  </div>
 
     <main class="flex flex-col items-center p-4 max-w-sm mx-auto">
       <a href="#">
