@@ -50,77 +50,79 @@
   }
 </script>
 
-<body class="max-w-screen-sm mx-auto px-10 pb-10 space-y-24">
+<body class="max-w-sm mx-auto">
 
-
-  <!-- the body of your page goes here -->
-  <div class="flex flex-row text-gray-800 p-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-square" width="66" height="66"
-      viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
-      stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M9 10a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-      <path d="M6 21v-1a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v1" />
-      <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
-    </svg>
-    <div class="container p-2">
-      <h5 class="font-sans text-xl font-semibold">Hi, <span id="name-goes-here"></span></h1>
-        <p class="text-[#6B685E]">Welcome to Neighbourly!</p>
+  <div class="bg-zinc-100">
+    <!-- the body of your page goes here -->
+    <div class="flex flex-row text-gray-800 p-2 max-w-sm mx-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-square" width="66" height="66"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M9 10a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+        <path d="M6 21v-1a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v1" />
+        <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+      </svg>
+      <div class="container p-2">
+        <h5 class="font-sans text-xl font-semibold">Hi, <span id="name-goes-here"></span></h1>
+          <p class="text-[#6B685E]">Welcome to Neighbourly!</p>
+      </div>
     </div>
+
+    <main class="flex flex-col items-center p-4 max-w-sm mx-auto">
+      <a href="#">
+        <div
+          class="hover:bg-[url('./images/housing-streetscape-rendering.png')] card mx-auto text-gray-800 bg-[#C8DCDA] shadow-md rounded-xl my-4">
+          <div class="flex flex-col p-6 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin-filled" width="44"
+              height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                stroke-width="0" fill="currentColor" />
+            </svg>
+            <h5 class="font-sans text-xl font-semibold text-gray-900">
+              Greater Vancouver Map
+            </h5>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="hover:brightness-50 card items-center mx-auto text-gray-800 bg-[#C8DCDA] shadow-md rounded-xl my-4">
+          <div class="p-6">
+            <h5 class="font-sans text-xl font-semibold text-gray-900">
+              Browse Neighborhoods
+            </h5>
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="hover:brightness-50 card items-center mx-auto text-gray-800 bg-[#C8DCDA] shadow-md rounded-xl my-4">
+          <div class="flex flex-col p-6 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="44" height="44"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+              <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+            </svg>
+            <h5 class="font-sans text-center text-xl font-semibold text-gray-900">
+              8° - Vancouver - Sunny
+              <hr>
+              7-day forecast
+            </h5>
+          </div>
+        </div>
+      </a>
+      <div>
+        <h5 class="font-sans text-xl font-semibold text-center text-gray-900">News Feed</h5>
+      </div>
+    </main>
+
+    <!-- our own footer goes here-->
+    <nav id="navbarPlaceholder"></nav>
   </div>
-
-  <main class="flex flex-col items-center p-4">
-    <a href="#">
-      <div class="hover:bg-[url('./images/housing-streetscape-rendering.png')] card mx-auto text-gray-800 bg-[#C8DCDA] shadow-md rounded-xl my-4">
-        <div class="flex flex-col p-6 items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin-filled" width="44"
-            height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
-              stroke-width="0" fill="currentColor" />
-          </svg>
-          <h5 class="font-sans text-xl font-semibold text-gray-900">
-            Greater Vancouver Map
-          </h5>
-        </div>
-      </div>
-    </a>
-    <a href="#">
-      <div class="hover:brightness-50 card items-center mx-auto text-gray-800 bg-[#C8DCDA] shadow-md rounded-xl my-4">
-        <div class="p-6">
-          <h5 class="font-sans text-xl font-semibold text-gray-900">
-            Browse Neighborhoods
-          </h5>
-        </div>
-      </div>
-    </a>
-    <a href="#">
-      <div class="hover:brightness-50 card items-center mx-auto text-gray-800 bg-[#C8DCDA] shadow-md rounded-xl my-4">
-        <div class="flex flex-col p-6 items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="44" height="44"
-            viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-            <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-          </svg>
-          <h5 class="font-sans text-center text-xl font-semibold text-gray-900">
-            8° - Vancouver - Sunny
-            <hr>
-            7-day forecast
-          </h5>
-        </div>
-      </div>
-    </a>
-    <div>
-      <h5 class="font-sans text-xl font-semibold text-center text-gray-900">News Feed</h5>
-    </div>
-  </main>
-
-  <!-- our own footer goes here-->
-  <nav id="navbarPlaceholder"></nav>
 
   <!---------------------------------------------->
   <!-- Your own JavaScript functions go here    -->
