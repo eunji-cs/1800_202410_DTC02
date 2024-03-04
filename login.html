@@ -27,9 +27,9 @@
                     extend: {
                         //  Add custom fonts here.   
                         fontFamily: {
-                        sans: ['Nunito', 'sans-serif'],
-                        serif: ['Source Serif Pro', 'serif'],
-                        mono: ['Orbitron', 'monospace'],
+                        Nunito: ['Nunito', 'sans-serif'],
+                        sourceSerif: ['Source Serif Pro', 'serif'],
+                        Orbitron: ['Orbitron', 'monospace'],
                         },
                         //  Add custom colors here.
                         colors: {
@@ -44,14 +44,17 @@
     </head>
 <body>
     <div class="h-screen flex flex-col items-center justify-center bg-[url('./images/login-background.jpg')] overflow-hidden rounded-lg bg-cover bg-no-repeat backdrop-brightness-70">
-        <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm">
+        <div class="w-full h-full flex flex-col justify-center items-center space-y-5 backdrop-blur-sm">
             <div class="flex flex-col space-y-5 text-center">
-                <h1 class="text-6xl text-mono font-semibold text-TitleColor drop-shadow-lg">Neighbourly</h1>
-                <p class="text-sm text-sans text-gray-700">This is a very cool project!</p>
+                <h1 class="text-6xl text-sourceSerif stroke-white font-bold text-slate-800 drop-shadow-xl">Neighbourly</h1>
+                <p class="text-md text-Nunito font-light text-gray-700 drop-shadow-sm">Commited to helping you locate suitable neighborhoods <br>for living with data sourced from local communities!</p>
             </div>
-            <div class="flex py-20 drop-shadow-lg">
-                <div id="firebaseui-auth-container"></div>
+            <div class="flex py-14 drop-shadow-lg">
+                <div id="firebaseui-auth-container" class="rounded-md"></div>
                 <div id="loader">Loading...</div>
+            </div>
+            <div>
+                <a href="main.html" class="text-sm font-semibold text-white">Continue as Guest</a>
             </div>
         </div>
     </div>
