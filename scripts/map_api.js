@@ -1,54 +1,32 @@
-    map.on('load', () => {
-        map.addSource('places', {
-            'type': 'geojson',
-            'data': {
-                'type': 'FeatureCollection',
-                'features': [
-                    {
-                        'type': 'Feature',
-                        'properties': {
-                            'description':
-                                '<strong>Make it Mount Pleasant</strong><p><a href="http://www.mtpleasantdc.com/makeitmtpleasant" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
-                            'icon': 'theatre'
-                        },
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': [49.2827, 123.1207]
-                        }
-                    }
-                ]
-            }
-        });
-        map.addLayer({
-            'id': 'places',
-            'type': 'symbol',
-            'source': 'places',
-            'layout': {
-                'icon-image': ['get', 'icon'],
-                'icon-allow-overlap': true
-            }
-        });
+mapboxgl.accessToken =
+  "pk.eyJ1Ijoic3ByaW5nYyIsImEiOiJjbHRnN3p6ZTYweTlnMmpwN25maDcxcHZxIn0.cW-TOK7z7FEIs-c2aW13gQ"
 
-        map.on('click', 'places', (e) => {
-            // Copy coordinates array.
-            const coordinates = e.features[0].geometry.coordinates.slice();
-            const description = e.features[0].properties.description;
+navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
+  enableHighAccuracy: true
+})
 
-            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-            }
+function successLocation(position) {
+  setupMap([position.coords.longitude, position.coords.latitude])
+}
 
-            new mapboxgl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(description)
-                .addTo(map);
-        });
+function errorLocation() {
+  setupMap([-2.24, 53.48])
+}
 
-        map.on('mouseenter', 'places', () => {
-            map.getCanvas().style.cursor = 'pointer';
-        });
+function setupMap(center) {
+  const map = new mapboxgl.Map({
+    container: "map",
+    style: "mapbox://styles/springc/cltgakc0u00v901rabaev0xa6",
+    center: [-123.1207, 49.2827],
+    zoom: 9
+  })
 
-        map.on('mouseleave', 'places', () => {
-            map.getCanvas().style.cursor = '';
-        });
-    });
+  const nav = new mapboxgl.NavigationControl()
+  map.addControl(nav)
+
+  var directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken
+  })
+
+  map.addControl(directions, "top-left")
+}
