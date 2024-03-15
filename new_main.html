@@ -19,7 +19,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+        rel="stylesheet">
 
     <!-- Custom Tailwind Configuration -->
     <script>
@@ -51,103 +53,116 @@
     <title>Neighbourly</title>
 </head>
 
-<body>
+<body class="font-sans">
+    <div class="max-w-screen-xl mx-auto">
 
-    <!-- Header -->
-    <header class="flex flex-row shrink text-gray-800 bg-gray-50 px-5 py-2 w-auto items-center drop-shadow-sm border-2 border-gray-300">
-        <div class="mx-1">
-            <img class="rounded-full" src="https://randomuser.me/api/portraits/women/65.jpg" alt="#">
-        </div>
-        <div class="container p-2">
-            <h5 class="font-sans text-xl font-semibold">Hi, <span id="name-goes-here">Username</span></h1>
-                <p class="text-[#6B685E]">Welcome to Neighbourly!</p>
-        </div>
-        <!-- Buttons -->
-        <div class="flex flex-row px-10 divide-x">
-            <div class="">
-                <button class="px-5">Something</button>
+        <!-- Header -->
+        <header
+            class="flex justify-between text-gray-800 bg-gray-50 p-3 items-center drop-shadow-sm border-2 border-gray-300">
+            <div class="mx-1">
+                <img class="rounded-full w-[80px]" src="https://randomuser.me/api/portraits/women/65.jpg" alt="#">
             </div>
-            <div class="">
-                <button class="px-5">Something</button>
+            <div class="container p-2">
+                <h5 class="font-sans text-xl font-semibold">Hi, <span id="name-goes-here">Username</span></h1>
+                    <p class="text-[#6B685E]">Welcome to Neighbourly!</p>
             </div>
-            <div class="">
-                <button class="px-5">Something</button>
+            <!-- Buttons -->
+            <div class="flex flex-row px-10 divide-x tracking-wider items-center">
+                <div class="hidden md:block">
+                    <button class="px-5 inline-block">Something</button>
+                </div>
+                <div class="hidden md:block">
+                    <button class="px-5 inline-bloc">Something</button>
+                </div>
+                <div class="hidden md:block">
+                    <button class="px-5 inline-bloc">Something</button>
+                </div>
+                <a href="" class="md:hidden p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 6l16 0" />
+                        <path d="M4 12l16 0" />
+                        <path d="M4 18l16 0" />
+                    </svg>
+                </a>
             </div>
-        </div>
-        <!-- Logout Button -->
-        <div class="container text-right px-5 py-2">
-            <a class="bg-mainColor hover:bg-buttonHover p-3 rounded-md text-white font-sans font-semibold"
-                href="./login.html">Logout</a>
-        </div>
-    </header>
+            <!-- Logout Button -->
+            <span class="container text-right px-5 py-2 hidden md:block">
+                <button class="bg-mainColor hover:bg-buttonHover p-3 rounded-md text-white font-sans font-semibold"
+                    href="./login.html">Logout</button>
+            </span>
+        </header>
 
 
-    <div class="flex flex-row">
-        <!-- Map Container -->
-        <div class="h-screen basis-5/6 overflow-hidden bg-cover bg-no-repeat bg-gray-400" id="map">
-            <!-- Searchbar -->
-            <div class="p-5 absolute mx-auto text-gray-600" id="searchbar">
-                <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-                    type="search" name="search" placeholder="Search">
-                <button type="submit" class="absolute items-center right-0 top-0 mt-5 mr-4">
-                </button>
-            </div>
-        </div>
-
-        <!-- Sidebar -->
-        <div class="flex flex-col basis-2/6">
-            <div class="flex flex-row bg-bannerColor border-b drop-shadow-sm border-gray-200 py-4 px-5 space-x-5">
-                <p class="text-white">Neighbourhood List</p>
-                <div>
-
+        <div class="flex flex-col mx-auto sm:flex-row">
+            <!-- Map Container -->
+            <div class="h-screen basis-5/6 overflow-hidden bg-cover bg-no-repeat bg-gray-400" id="map">
+                <!-- Searchbar -->
+                <div class="p-5 absolute mx-auto text-gray-600" id="searchbar">
+                    <input
+                        class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                        type="search" name="search" placeholder="Search">
+                    <button type="submit" class="absolute items-center right-0 top-0 mt-5 mr-4">
+                    </button>
                 </div>
             </div>
-            <div class="flex flex-col basis-2/6" id="listHolder">
-                <!-- Cards -->
-                <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
-                    <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
-                    <div class="flex flex-col grow space-y-2">
-                        <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
-                        <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit.</p>
+
+            <!-- Sidebar -->
+            <div class="flex flex-col max-auto basis-2/6">
+                <div class="flex flex-row bg-bannerColor border-b drop-shadow-sm border-gray-200 py-4 px-5 space-x-5">
+                    <p class="text-white">Neighbourhood List</p>
+                    <div>
+
                     </div>
                 </div>
-                <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
-                    <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
-                    <div class="flex flex-col grow space-y-2">
-                        <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
-                        <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit.</p>
+                <div class="flex flex-col basis-2/6" id="listHolder">
+                    <!-- Cards -->
+                    <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
+                        <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
+                        <div class="flex flex-col grow space-y-2">
+                            <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
+                            <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
-                    <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
-                    <div class="flex flex-col grow space-y-2">
-                        <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
-                        <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit.</p>
+                    <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
+                        <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
+                        <div class="flex flex-col grow space-y-2">
+                            <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
+                            <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
-                    <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
-                    <div class="flex flex-col grow space-y-2">
-                        <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
-                        <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit.</p>
+                    <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
+                        <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
+                        <div class="flex flex-col grow space-y-2">
+                            <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
+                            <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
-                    <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
-                    <div class="flex flex-col grow space-y-2">
-                        <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
-                        <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit.</p>
+                    <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
+                        <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
+                        <div class="flex flex-col grow space-y-2">
+                            <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
+                            <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row bg-gray-50 border-b border-gray-200 py-4 px-5 space-x-5">
+                        <img class="h-auto max-w-24 rounded-md" src="https://picsum.photos/id/4/5000/3333">
+                        <div class="flex flex-col grow space-y-2">
+                            <h2 class="text-2xl font-semibold align-text-top">Placeholder Title</h2>
+                            <p class="text-md font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
-
-
         <!---------------------------------------------->
         <!-- Your own JavaScript functions go here    -->
         <!---------------------------------------------->
@@ -165,6 +180,7 @@
         <!-- <script src="./scripts/skeleton.js"></script> -->
         <script src="./scripts/main.js"></script>
         <script src="./scripts/script.js"></script>
+    </div>
 </body>
 
 </html>
