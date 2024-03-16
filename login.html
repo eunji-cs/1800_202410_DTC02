@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!-- Import Tailwind-->
-        <script src="https://cdn.tailwindcss.com"></script>
-    
-        <!-- Firebase CDN Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-    
-        <!-- Custom Tailwind Configuration -->
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        //  Add custom fonts here.   
-                        fontFamily: {
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Firebase CDN Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    //  Add custom fonts here.   
+                    fontFamily: {
                         Nunito: ['Nunito', 'sans-serif'],
                         sourceSerif: ['Source Serif Pro', 'serif'],
-                        },
-                        //  Add custom colors here.
-                        colors: {
-                            TitleColor:'#55d13d'
-                        },
-                    }
+                    },
+                    //  Add custom colors here.
+                    colors: {
+                        TitleColor: '#55d13d'
+                    },
                 }
             }
-        </script>
-    
-        <title>Neighbourly</title>
-    </head>
+        }
+    </script>
+
+    <title>Neighbourly</title>
+</head>
+
 <body>
-    <div class="h-screen flex flex-col items-center justify-center bg-[url('./images/login-background.jpg')] overflow-hidden bg-cover bg-no-repeat backdrop-brightness-70">
+    <div
+        class="h-screen flex flex-col items-center justify-center bg-[url('./images/login-background.jpg')] overflow-hidden bg-cover bg-no-repeat backdrop-brightness-70">
         <div class="w-full h-full flex flex-col justify-center items-center space-y-5 backdrop-blur-sm">
             <div class="flex flex-col space-y-5 text-center">
-                <h1 class="text-6xl font-sourceSerif stroke-white font-bold text-slate-800 drop-shadow-xl">Neighbourly</h1>
-                <p class="text-md font-Nunito font-light text-gray-700 drop-shadow-sm">Commited to helping you locate suitable neighborhoods <br>for living with data sourced from local communities!</p>
+                <h1 class="text-6xl font-sourceSerif stroke-white font-bold text-slate-800 drop-shadow-xl">Neighbourly
+                </h1>
+                <p class="text-md font-Nunito font-light text-gray-700 drop-shadow-sm">Commited to helping you locate
+                    suitable neighborhoods <br>for living with data sourced from local communities!</p>
             </div>
             <div class="flex py-14 drop-shadow-lg">
                 <div id="firebaseui-auth-container" class="rounded-md"></div>
@@ -63,4 +70,5 @@
     <script src="./scripts/authentication.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
+
 </html>

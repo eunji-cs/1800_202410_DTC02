@@ -4,27 +4,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          //  Add custom fonts here.   
+          fontFamily: {
+            Nunito: ['Nunito', 'sans-serif'],
+            sourceSerif: ['Source Serif Pro', 'serif'],
+          },
+          //  Add custom colors here.
+          colors: {
+            TitleColor: '#55d13d'
+          },
+        }
+      }
+    }
+  </script>
 </head>
 
-<body class="mx-auto max-w-sm flex flex-col items-center bg-zinc-100"></body>
+<body style="background-color:#C2C5B1;" class="max-w-screen-xl mx-auto">
 
-<h3 class="font-semibold pb-5 items-center align-middle justify-center">NeighbourHoods close to</h2>
-  <div class="flex flex-col space-y-4">
-    <div class="p-1 bg-zinc-200">
-      <button>Neighborhood 1</button>
+  <nav class="flex justify-between items-center p-4">
+    <h1 class="p-3 text-2xl font-sourceSerif stroke-white font-bold text-slate-800">Neighbourly
+    </h1>
+    <div class="px-0 border rounded-full text-xs">
+      <button class="p-2 rounded-md text-slate-800 font-sans font-thin" href="./login.html">Logout</button>
     </div>
-    <div class="p-1 bg-zinc-200">
-      <button>Neighborhood 2</button>
+  </nav>
+
+  <main class="px-6">
+    <div class="leading-10">
+      <p class="p-2 border-y border-slate-500">Lorem, ipsum. &#9654</p>
+      <p class="p-2 border- border-slate-500">Lorem, ipsum. &#9654</p>
+      <p class="p-2 border-y border-slate-500">Lorem, ipsum. &#9654</p>
+      <p class="p-2 border- border-slate-500">Lorem, ipsum. &#9654</p>
+      <p class="p-2 border-y border-slate-500">Lorem, ipsum. &#9654</p>
+      <p class="p-2 border-b border-slate-500">Lorem, ipsum. &#9654</p>
     </div>
-    <div class="p-1 bg-zinc-200">
-      <button>Neighborhood 3</button>
+
+  </main>
+  <section>
+    <div class="text-center font-thin text-xs leading-7">
+      <div class="pt-2">
+        <button class="border rounded-full p-1">English</button>
+      </div>
+      <p>Privacy Policy</p>
+      <p>Privacy Policy</p>
+      <p>Privacy Policy</p>
+      <p>Privacy Policy</p>
+
+
+
+
+
     </div>
-    <div class="p-1 bg-zinc-200">
-      <button>Neighborhood 4</button>
-    </div>
+  </section>
 
-  </div>
+  <footer>
+    <p class="text-center p-5">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block icon icon-tabler icon-tabler-brand-x" width="32"
+          height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6B8054" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+          <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+        </svg>
+      </a>
+
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block icon icon-tabler icon-tabler-brand-facebook"
+          width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6B8054" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+        </svg>
+      </a>
+
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block icon icon-tabler icon-tabler-brand-instagram"
+          width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6B8054" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+          <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+          <path d="M16.5 7.5l0 .01" />
+        </svg>
+      </a>
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block icon icon-tabler icon-tabler-brand-linkedin"
+          width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6B8054" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+          <path d="M8 11l0 5" />
+          <path d="M8 8l0 .01" />
+          <path d="M12 16l0 -5" />
+          <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+        </svg>
+      </a>
+    </p>
+  </footer>
 
 
 
@@ -32,10 +123,6 @@
 
 
 
-
-
-
-
-  </body>
+</body>
 
 </html>
