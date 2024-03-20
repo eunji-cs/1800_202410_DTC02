@@ -25,7 +25,10 @@
           },
           //  Add custom colors here.
           colors: {
-            TitleColor: '#55d13d'
+            TitleColor: '#55d13d',
+            bannerColor: '#6B8054',
+            mainColor: '#6B8054',
+            buttonHover: '#778f5d',
           },
         }
       }
@@ -38,38 +41,41 @@
   <nav class="flex justify-between items-center p-4">
     <h1 class="p-3 text-2xl font-sourceSerif stroke-white font-bold text-slate-800">Neighbourly
     </h1>
-    <div class="px-0 border rounded-full text-xs">
-      <a class="p-2 rounded-md text-slate-800 font-sans font-thin" href="./login.html">Logout</a>
-    </div>
+    <span class="container text-right px-5 py-2 md:block">
+      <a class="bg-mainColor hover:bg-buttonHover p-3 rounded-md text-white font-sans font-semibold"
+          href="./new_main.html">Back</a>
+  </span>
   </nav>
 
-  <main class="px-6">
-    <div class="leading-10">
-      <p class="p-2 border-y border-slate-500">Lorem, ipsum. &#9654</p>
-      <p class="p-2 border- border-slate-500">Lorem, ipsum. &#9654</p>
-      <p class="p-2 border-y border-slate-500">Lorem, ipsum. &#9654</p>
-      <p class="p-2 border- border-slate-500">Lorem, ipsum. &#9654</p>
-      <p class="p-2 border-y border-slate-500">Lorem, ipsum. &#9654</p>
-      <p class="p-2 border-b border-slate-500">Lorem, ipsum. &#9654</p>
-    </div>
+  <div class="flex flex-grow bg-gray-50 border-b border-gray-200 py-4 px-5">
+    <button class="flex flex-row items-center text-left w-full space-x-5">
+        <img class="mx-auto max-h-32 max-w-32 rounded-md" src="https://picsum.photos/id/4/5000/3333">
+        <div class="flex flex-col grow space-y-2">
+            <h2 class="text-2xl font-semibold">Placeholder Title</h2>
+            <p class="text-sm font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </button>
+  </div>
 
-  </main>
-  <section>
-    <div class="text-center font-thin text-xs leading-7">
-      <div class="pt-2">
-        <button class="border rounded-full p-1">English</button>
-      </div>
-      <p>Privacy Policy</p>
-      <p>Privacy Policy</p>
-      <p>Privacy Policy</p>
-      <p>Privacy Policy</p>
+  <div class="flex flex-grow bg-gray-50 border-b border-gray-200 py-4 px-5">
+    <button class="flex flex-row items-center text-left w-full space-x-5">
+        <img class="mx-auto max-h-32 max-w-32 rounded-md" src="https://picsum.photos/id/4/5000/3333">
+        <div class="flex flex-col grow space-y-2">
+            <h2 class="text-2xl font-semibold">Placeholder Title</h2>
+            <p class="text-sm font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </button>
+  </div>
 
-
-
-
-
-    </div>
-  </section>
+  <div class="flex flex-grow bg-gray-50 border-b border-gray-200 py-4 px-5">
+    <button class="flex flex-row items-center text-left w-full space-x-5">
+        <img class="mx-auto max-h-32 max-w-32 rounded-md" src="https://picsum.photos/id/4/5000/3333">
+        <div class="flex flex-col grow space-y-2">
+            <h2 class="text-2xl font-semibold">Placeholder Title</h2>
+            <p class="text-sm font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </button>
+  </div>
 
   <footer>
     <p class="text-center p-5">
