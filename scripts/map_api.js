@@ -1,32 +1,19 @@
-mapboxgl.accessToken =
-  "pk.eyJ1Ijoic3ByaW5nYyIsImEiOiJjbHRnN3p6ZTYweTlnMmpwN25maDcxcHZxIn0.cW-TOK7z7FEIs-c2aW13gQ"
+// add markers to map
+for (const feature of geojson.features) {
+  // create a HTML element for each feature
+  const el = document.createElement('div');
+  el.className = 'marker';
 
-navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
-  enableHighAccuracy: true
-})
-
-function successLocation(position) {
-  setupMap([position.coords.longitude, position.coords.latitude])
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
 }
 
-function errorLocation() {
-  setupMap([-2.24, 53.48])
-}
-
-function setupMap(center) {
-  const map = new mapboxgl.Map({
-    container: "map",
-    style: "mapbox://styles/springc/cltgakc0u00v901rabaev0xa6",
-    center: [-123.1207, 49.2827],
-    zoom: 9
-  })
-
-  const nav = new mapboxgl.NavigationControl()
-  map.addControl(nav)
-
-  var directions = new MapboxDirections({
-    accessToken: mapboxgl.accessToken
-  })
-
-  map.addControl(directions, "top-left")
-}
+new mapboxgl.Marker(el)
+  .setLngLat(feature.geometry.coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 25 }) // add popups
+      .setHTML(
+        `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+      )
+  )
+  .addTo(map);
