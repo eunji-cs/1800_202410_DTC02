@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Description</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet"
+    href="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/css/main.d7f96858.css" />
+
+  <!-- Firebase CDN Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          //  Add custom fonts here.   
+          fontFamily: {
+            Nunito: ['Nunito', 'sans-serif'],
+            sourceSerif: ['Source Serif Pro', 'serif'],
+          },
+          //  Add custom colors here.
+          colors: {
+            TitleColor: '#55d13d',
+            bannerColor: '#6B8054',
+            mainColor: '#6B8054',
+            buttonHover: '#778f5d',
+          },
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body class="max-w-screen-xl mx-auto">
+
+
+  <div class="flex flex-auto items-center">
+    <a href="" class="justify-start">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="32"
+        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M5 12l14 0" />
+        <path d="M5 12l4 4" />
+        <path d="M5 12l4 -4" />
+      </svg>
+    </a>
+
+    <div class="flex justify-center flex-auto">
+      <h1 class="text-center p-3 text-2xl font-sourceSerif font-bold text-slate-800 py-4 px-5 space-x-5">Neighbourly
+      </h1>
+    </div>
+  </div>
+
+
+
+
+  <div class="max-w-sm rounded overflow-hidden shadow-lg justify-center mx-auto">
+    <img class="w-full" src="https://vancouver.ca/images/cov/feature/kitsilano-landing.jpg" alt="">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">Kitsilano</div>
+      <p class="text-gray-700 text-base">
+        Kitsilano, known locally as Kits, is synonymous with famous Kits Beach—named one of the "top 10 best city
+        beaches
+        in the
+        world" by international travel magazines, and perfect for outdoor fitness. Kitsilano is one of the city's
+        organic-food
+        hubs, and has extensive restaurants and retail along West 4th Avenue and West Broadway. Kitsilano runs along the
+        south
+        shore of English Bay, between popular Granville Island and Point Grey
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Bikers</span>
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Walker</span>
+      <span
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Excellent
+        transit</span>
+    </div>
+  </div>
+
+  <div>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg justify-center mx-auto pt-6">
+      <div
+        class="relative flex max-w-[500px] h-[430px] w-full flex-col rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">
+        <div
+          class="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pb-[20px] pt-4 shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
+          <h4 class="text-lg font-bold text-navy-700 dark:text-white">
+            Area Feature
+          </h4>
+          <button
+            class="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
+            Review
+          </button>
+        </div>
+        <div class="w-full overflow-x-scroll px-4 md:overflow-x-hidden">
+          <table role="table" class="w-full min-w-[500px] overflow-x-scroll">
+            <thead>
+              <tr role="row">
+                <th colspan="1" role="columnheader" title="Toggle SortBy" style="cursor: pointer">
+                  <div
+                    class="flex items-center justify-between pb-2 pt-4 text-start uppercase tracking-wide text-gray-600 sm:text-xs lg:text-xs">
+                    Ranking
+                  </div>
+                </th>
+                <th colspan="1" role="columnheader" title="Toggle SortBy" style="cursor: pointer">
+                  <div
+                    class="flex items-center justify-between pb-2 pt-4 text-start uppercase tracking-wide text-gray-600 sm:text-xs lg:text-xs">
+                    Score
+                  </div>
+                </th>
+                <th colspan="1" role="columnheader" title="Toggle SortBy" style="cursor: pointer">
+                  <div
+                    class="flex items-center justify-between pb-2 pt-4 text-start uppercase tracking-wide text-gray-600 sm:text-xs lg:text-xs">
+                    Rating
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup" class="px-4">
+              <tr role="row">
+                <td class="py-3 text-sm" role="cell">
+                  <div class="flex items-center gap-2">
+                    <div class="h-[30px] w-[30px] rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bike" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M5 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M19 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M12 19l0 -4l-3 -3l5 -4l2 3l3 0" />
+                        <path d="M17 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                      </svg>
+                    </div>
+                    <p class="text-sm font-medium text-navy-700 dark:text-white">
+                      Biker
+                    </p>
+                  </div>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <p class="text-md font-medium text-gray-600 dark:text-white">
+                    98
+                  </p>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <div class="mx-2 flex font-bold">
+                    <div class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700">
+                      <div class="flex h-full items-center justify-center rounded-md bg-[#6B8054] dark:bg-brand-#6B8054"
+                        style="width: 90%"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row">
+                <td class="py-3 text-sm" role="cell">
+                  <div class="flex items-center gap-2">
+                    <div class="h-[30px] w-[30px] rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bus" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M18 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M4 17h-2v-11a1 1 0 0 1 1 -1h14a5 7 0 0 1 5 7v5h-2m-4 0h-8" />
+                        <path d="M16 5l1.5 7l4.5 0" />
+                        <path d="M2 10l15 0" />
+                        <path d="M7 5l0 5" />
+                        <path d="M12 5l0 5" />
+                      </svg>
+                    </div>
+                    <p class="text-sm font-medium text-navy-700 dark:text-white">
+                      Transit
+                    </p>
+                  </div>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <p class="text-md font-medium text-gray-600 dark:text-white">
+                    88
+                  </p>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <div class="mx-2 flex font-bold">
+                    <div class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700">
+                      <div class="flex h-full items-center justify-center rounded-md bg-[#6B8054] dark:bg-brand-#6B8054"
+                        style="width: 30%"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row">
+                <td class="py-3 text-sm" role="cell">
+                  <div class="flex items-center gap-2">
+                    <div class="h-[30px] w-[30px] rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-walk" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M13 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M7 21l3 -4" />
+                        <path d="M16 21l-2 -4l-3 -3l1 -6" />
+                        <path d="M6 12l2 -3l4 -1l3 3l3 1" />
+                      </svg>
+                    </div>
+                    <p class="text-sm font-medium text-navy-700 dark:text-white">
+                      Walker
+                    </p>
+                  </div>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <p class="text-md font-medium text-gray-600 dark:text-white">
+                    90
+                  </p>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <div class="mx-2 flex font-bold">
+                    <div class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700">
+                      <div class="flex h-full items-center justify-center rounded-md bg-[#6B8054] dark:bg-brand-400"
+                        style="width: 30%"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row">
+                <td class="py-3 text-sm" role="cell">
+                  <div class="flex items-center gap-2">
+                    <div class="h-[30px] w-[30px] rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shield-check"
+                        width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" />
+                        <path d="M15 19l2 2l4 -4" />
+                      </svg>
+                    </div>
+                    <p class="text-sm font-medium text-navy-700 dark:text-white">
+                      Safety
+                    </p>
+                  </div>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <p class="text-md font-medium text-gray-600 dark:text-white">
+                    85
+                  </p>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <div class="mx-2 flex font-bold">
+                    <div class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700">
+                      <div class="flex h-full items-center justify-center rounded-md bg-[#6B8054] dark:bg-brand-400"
+                        style="width: 30%"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr role="row">
+                <td class="py-3 text-sm" role="cell">
+                  <div class="flex items-center gap-2">
+                    <div class="h-[30px] w-[30px] rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tree" width="32"
+                        height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 13l-2 -2" />
+                        <path d="M12 12l2 -2" />
+                        <path d="M12 21v-13" />
+                        <path
+                          d="M9.824 16a3 3 0 0 1 -2.743 -3.69a3 3 0 0 1 .304 -4.833a3 3 0 0 1 4.615 -3.707a3 3 0 0 1 4.614 3.707a3 3 0 0 1 .305 4.833a3 3 0 0 1 -2.919 3.695h-4z" />
+                      </svg>
+                    </div>
+                    <p class="text-sm font-medium text-navy-700 dark:text-white">
+                      Parks
+                    </p>
+                  </div>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <p class="text-md font-medium text-gray-600 dark:text-white">
+                    80
+                  </p>
+                </td>
+                <td class="py-3 text-sm" role="cell">
+                  <div class="mx-2 flex font-bold">
+                    <div class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700">
+                      <div class="flex h-full items-center justify-center rounded-md bg-[#6B8054] dark:bg-brand-400"
+                        style="width: 30%"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <footer>
+
+
+    <nav class="container flex justify-center bg-[#C2C5B1] mx-auto py-4 px-5 space-x-5">
+
+
+      <a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="32" height="32"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
+          <path d="M9 4v13" />
+          <path d="M15 7v5.5" />
+          <path
+            d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
+          <path d="M19 18v.01" />
+        </svg>
+      </a>
+
+
+
+
+
+    </nav>
+
+
+  </footer>
+
+</body>
+
+</html>
