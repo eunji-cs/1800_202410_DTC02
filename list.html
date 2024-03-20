@@ -5,8 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Import Tailwind-->
   <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Firebase CDN Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 
   <!-- Fonts -->
   <link
@@ -38,45 +47,34 @@
 
 <body style="background-color:#C2C5B1;" class="max-w-screen-xl mx-auto">
 
+  <!-- Navbar -->
   <nav class="flex justify-between items-center p-4">
     <h1 class="p-3 text-2xl font-sourceSerif stroke-white font-bold text-slate-800">Neighbourly
     </h1>
     <span class="container text-right px-5 py-2 md:block">
       <a class="bg-mainColor hover:bg-buttonHover p-3 rounded-md text-white font-sans font-semibold"
-          href="./new_main.html">Back</a>
-  </span>
+        href="./new_main.html">Back</a>
+    </span>
   </nav>
 
-  <div class="flex flex-grow bg-gray-50 border-b border-gray-200 py-4 px-5">
-    <button class="flex flex-row items-center text-left w-full space-x-5">
-        <img class="mx-auto max-h-32 max-w-32 rounded-md" src="https://picsum.photos/id/4/5000/3333">
-        <div class="flex flex-col grow space-y-2">
-            <h2 class="text-2xl font-semibold">Placeholder Title</h2>
-            <p class="text-sm font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-    </button>
+  <div id="neighbourhoods-go-here">
+
   </div>
 
-  <div class="flex flex-grow bg-gray-50 border-b border-gray-200 py-4 px-5">
+  <!-- Cards (Not Shown)-->
+  <template id="listItemTemplate" class="flex flex-grow bg-gray-50 border-b border-gray-200 py-4 px-5">
     <button class="flex flex-row items-center text-left w-full space-x-5">
-        <img class="mx-auto max-h-32 max-w-32 rounded-md" src="https://picsum.photos/id/4/5000/3333">
-        <div class="flex flex-col grow space-y-2">
-            <h2 class="text-2xl font-semibold">Placeholder Title</h2>
-            <p class="text-sm font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
+      <img class="mx-auto max-h-32 max-w-32 rounded-md" src="https://picsum.photos/id/4/5000/3333">
+      <div class="flex flex-col grow space-y-2">
+        <h2 id="neighbourhood-name-goes-here" class="text-2xl font-semibold">Placeholder Title</h2>
+        <p class="text-sm font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet consectetur adipisicing
+          elit.</p>
+      </div>
     </button>
-  </div>
+  </template>
 
-  <div class="flex flex-grow bg-gray-50 border-b border-gray-200 py-4 px-5">
-    <button class="flex flex-row items-center text-left w-full space-x-5">
-        <img class="mx-auto max-h-32 max-w-32 rounded-md" src="https://picsum.photos/id/4/5000/3333">
-        <div class="flex flex-col grow space-y-2">
-            <h2 class="text-2xl font-semibold">Placeholder Title</h2>
-            <p class="text-sm font-light inline-block align-text-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-    </button>
-  </div>
 
+  <!-- Footer -->
   <footer>
     <p class="text-center p-5">
       <a href="#">
@@ -123,11 +121,8 @@
     </p>
   </footer>
 
-
-
-
-
-
+  <script src="./scripts/firebaseAPI_DTC02.js"></script>
+  <script src="./scripts/list.js"></script>
 
 </body>
 
