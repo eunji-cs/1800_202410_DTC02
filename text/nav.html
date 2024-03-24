@@ -9,91 +9,70 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          //  Add custom fonts here.   
+          fontFamily: {
+            Nunito: ['Nunito', 'sans-serif'],
+            sourceSerif: ['Source Serif Pro', 'serif'],
+          },
+          //  Add custom colors here.
+          colors: {
+            TitleColor: '#55d13d',
+            bannerColor: '#6B8054',
+            mainColor: '#6B8054',
+            buttonHover: '#778f5d',
+          },
+        }
+      }
+    }
+  </script>
 </head>
 
 <body class="mx-auto max-w-sm">
 
-  <footer>
-
-    <nav class="container flex justify-between bg-[#C2C5B1] mx-auto max-w-sm">
-      <button>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="32" height="32"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-          <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-          <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-        </svg>
-      </button>
+  <footer class="container flex justify-between bg-[#C2C5B1] mx-auto py-4 px-5 space-x-5 flex-auto">
 
 
-      <button>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart-filled" width="32" height="32"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
-            stroke-width="0" fill="currentColor" />
-        </svg>
-      </button>
+    <a href="">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="44"
+        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M5 12l14 0" />
+        <path d="M5 12l4 4" />
+        <path d="M5 12l4 -4" />
+      </svg>
+    </a>
 
-      <div class="dropup">
-        <button
-          class="relative group transition-all duration-200 focus:overflow-visible w-max h-max p-2 overflow-hidden flex flex-row items-center justify-center gap-2"
-          type="button" data-toggle="dropup">
-
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list" width="32" height="32"
-            viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M9 6l11 0" />
-            <path d="M9 12l11 0" />
-            <path d="M9 18l11 0" />
-            <path d="M5 6l0 .01" />
-            <path d="M5 12l0 .01" />
-            <path d="M5 18l0 .01" />
-          </svg>
-          <div
-            class="absolute shadow-lg top-full left-0 w-full h-max p-2 bg-white border border-zinc-200 rounded-lg flex flex-col gap-2">
-            <span class="flex flex-row gap-2 items-center hover:bg-zinc-100 p-2 rounded-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                  d="M12 5q-.425 0-.712-.288T11 4V2q0-.425.288-.712T12 1q.425 0 .713.288T13 2v2q0 .425-.288.713T12 5m4.95 2.05q-.275-.275-.275-.687t.275-.713l1.4-1.425q.3-.3.712-.3t.713.3q.275.275.275.7t-.275.7L18.35 7.05q-.275.275-.7.275t-.7-.275M20 13q-.425 0-.713-.288T19 12q0-.425.288-.712T20 11h2q.425 0 .713.288T23 12q0 .425-.288.713T22 13zm-8 10q-.425 0-.712-.288T11 22v-2q0-.425.288-.712T12 19q.425 0 .713.288T13 20v2q0 .425-.288.713T12 23M5.65 7.05l-1.425-1.4q-.3-.3-.3-.725t.3-.7q.275-.275.7-.275t.7.275L7.05 5.65q.275.275.275.7t-.275.7q-.3.275-.7.275t-.7-.275m12.7 12.725l-1.4-1.425q-.275-.3-.275-.712t.275-.688q.275-.275.688-.275t.712.275l1.425 1.4q.3.275.288.7t-.288.725q-.3.3-.725.3t-.7-.3M2 13q-.425 0-.712-.288T1 12q0-.425.288-.712T2 11h2q.425 0 .713.288T5 12q0 .425-.288.713T4 13zm2.225 6.775q-.275-.275-.275-.7t.275-.7L5.65 16.95q.275-.275.687-.275t.713.275q.3.3.3.713t-.3.712l-1.4 1.4q-.3.3-.725.3t-.7-.3M12 18q-2.5 0-4.25-1.75T6 12q0-2.5 1.75-4.25T12 6q2.5 0 4.25 1.75T18 12q0 2.5-1.75 4.25T12 18m0-2q1.65 0 2.825-1.175T16 12q0-1.65-1.175-2.825T12 8q-1.65 0-2.825 1.175T8 12q0 1.65 1.175 2.825T12 16m0-4" />
-              </svg>
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user inline"
-                  width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                </svg>User</a>
-            </span>
-            <span class="flex flex-row gap-2 items-center hover:bg-zinc-100 p-2 rounded-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                <path fill="currentColor"
-                  d="M12 21q-3.775 0-6.387-2.613T3 12q0-3.45 2.25-5.988T11 3.05q.325-.05.575.088t.4.362q.15.225.163.525t-.188.575q-.425.65-.638 1.375T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q.775 0 1.538-.225t1.362-.625q.275-.175.563-.162t.512.137q.25.125.388.375t.087.6q-.35 3.45-2.937 5.725T12 21m0-2q2.2 0 3.95-1.213t2.55-3.162q-.5.125-1 .2t-1 .075q-3.075 0-5.238-2.163T9.1 7.5q0-.5.075-1t.2-1q-1.95.8-3.163 2.55T5 12q0 2.9 2.05 4.95T12 19m-.25-6.75" />
-              </svg>
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-settings-question inline" width="24" height="24"
-                  viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path
-                    d="M14.69 18.498c-.508 .21 -.885 .65 -1.015 1.185c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572a1.67 1.67 0 0 1 1.179 .982" />
-                  <path d="M14.95 12.553a3 3 0 1 0 -1.211 1.892" />
-                  <path d="M19 22v.01" />
-                  <path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
-                </svg>Setting</a>
-            </span>
-
-          </div>
-        </button>
-      </div>
+    <a>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="32" height="32"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
+        <path d="M9 4v13" />
+        <path d="M15 7v5.5" />
+        <path
+          d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
+        <path d="M19 18v.01" />
+      </svg>
+    </a>
 
 
-    </nav>
+    <a href="">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="32" height="32"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="#1e293b " fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+      </svg>
+    </a>
+
 
   </footer>
 

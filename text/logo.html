@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="myscripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          //  Add custom fonts here.   
+          fontFamily: {
+            Nunito: ['Nunito', 'sans-serif'],
+            sourceSerif: ['Source Serif Pro', 'serif'],
+          },
+          //  Add custom colors here.
+          colors: {
+            TitleColor: '#55d13d',
+            bannerColor: '#6B8054',
+            mainColor: '#6B8054',
+            buttonHover: '#778f5d',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="mx-auto max-w-sm">
+
+  <nav id="navbarPlaceholder" class="flex justify-center flex-auto">
+    <h1 class="text-center p-3 text-2xl font-sourceSerif font-bold text-slate-800 py-4 px-5 space-x-5">Neighbourly
+    </h1>
+  </nav>
+
+</body>
+
+</html>
