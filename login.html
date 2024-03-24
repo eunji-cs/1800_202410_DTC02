@@ -45,16 +45,21 @@
     <title>Neighbourly</title>
 </head>
 
-<body>
+<body class="max-w-sm mx-auto">
     <div
-        class="h-screen flex flex-col items-center justify-center bg-[url('./images/login-background.jpg')] overflow-hidden bg-cover bg-no-repeat backdrop-brightness-70">
+        class="flex flex-col items-center justify-center bg-[url('./images/login-background.jpg')] overflow-hidden bg-cover bg-no-repeat backdrop-brightness-70">
         <div class="w-full h-full flex flex-col justify-center items-center space-y-5 backdrop-blur-sm">
-            <div class="flex flex-col space-y-5 text-center">
-                <h1 class="text-6xl font-sourceSerif stroke-white font-bold text-slate-800 drop-shadow-xl">Neighbourly
+            <div class="flex flex-col space-y-5 text-center pb-10">
+                <h1 class="text-4xl font-sourceSerif stroke-white font-bold text-slate-800 drop-shadow-xl p-4 pt-4">
+                    Neighbourly
                 </h1>
-                <p class="text-md font-Nunito font-light text-gray-700 drop-shadow-sm">Commited to helping you locate
+            </div>
+            <div>
+                <p class="text-md font-Nunito font-light text-white drop-shadow-sm pt-5">Commited to helping you
+                    locate
                     suitable neighborhoods <br>for living with data sourced from local communities!</p>
             </div>
+
             <div class="flex py-14 drop-shadow-lg px-8">
                 <div id="firebaseui-auth-container" class="rounded-md"></div>
                 <div id="loader">Loading...</div>
