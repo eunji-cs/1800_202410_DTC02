@@ -51,9 +51,8 @@ function writeNeighbourhoods() {
   neighbourhoodsRef.add({
     code: "DTC0201",
     title: "Kitsilano",
-    city: "Vancouver",
-    province: "BC",
     description: "Close to the beach",
+    tag: "bike-friendly",
     lat: 49.2684,
     lng: -123.1683,
     last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
@@ -61,9 +60,8 @@ function writeNeighbourhoods() {
   neighbourhoodsRef.add({
     code: "DTC0202",
     title: "BCIT",
-    city: "Vancouver",
-    province: "BC",
     description: "Pretend Dan lives here",
+    tag: "student-friendly",
     lat: 49.3399431028579,
     lng: -122.85908496766939,
     last_updated: firebase.firestore.Timestamp.fromDate(new Date("March 10, 2022"))
@@ -71,9 +69,8 @@ function writeNeighbourhoods() {
   neighbourhoodsRef.add({
     code: "DTC0203",
     title: "Killarney",
-    city: "Vancouver",
-    province: "BC",
     description: "Close to off leash dog park",
+    tag: "pet-friendly",
     lat: 49.2202,
     lng: -123.0413,
     last_updated: firebase.firestore.Timestamp.fromDate(new Date("January 1, 2023"))

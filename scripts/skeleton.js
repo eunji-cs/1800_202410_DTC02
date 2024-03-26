@@ -5,6 +5,10 @@ function loadSkeleton() {
             // Do something for the user here.
             console.log($('#footerPlaceholder').load('./text/footer.html'));
             console.log($('#headerPlaceholder').load('./text/nav.html'));
+        } else {
+            // No user is signed in.
+            console.log($('#footerPlaceholder').load('./text/footer.html'));
+            console.log($('#headerPlaceholder').load('./text/nav.html'));
         }
     });
 }
