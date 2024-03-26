@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neighbourly - My Review</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet"
+    href="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/css/main.d7f96858.css" />
+
+  <!-- Firebase CDN Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            Nunito: ['Nunito', 'sans-serif'],
+            sourceSerif: ['Source Serif Pro', 'serif'],
+          },
+          colors: {
+            TitleColor: '#55d13d',
+            bannerColor: '#6B8054',
+            mainColor: '#6B8054',
+            buttonHover: '#778f5d',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="max-w-sm mx-auto">
+
+  <nav id="logoPlaceholder" class="flex justify-center flex-auto">
+    <h1 class="text-center p-3 text-2xl font-sourceSerif font-bold text-slate-800 py-4 px-5 space-x-5">Neighbourly
+    </h1>
+  </nav>
+
+  <div class="flex items-center justify-center p-12">
+    <div class="mx-auto w-full max-w-[550px]">
+      <form action="https://formbold.com/s/FORM_ID" method="POST">
+        <div class="mb-5">
+          <label for="name" class="mb-3 block text-base font-medium text-[#07074D]">
+            Name
+          </label>
+          <input type="text" name="name" id="name" placeholder="Full Name"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+            Email Address
+          </label>
+          <input type="email" name="email" id="email" placeholder="example@domain.com"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+        </div>
+        <div class="mb-5">
+          <label for="subject" class="mb-3 block text-base font-medium text-[#07074D]">
+            Title
+          </label>
+          <input type="text" name="subject" id="subject" placeholder="Enter your title"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+        </div>
+        <div class="mb-5 pb-">
+          <label for="message" class="mb-3 block text-base font-medium text-[#07074D]">
+            Uplift your community with a review:
+          </label>
+          <textarea rows="4" name="message" id="message" placeholder="Type your review here"
+            class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
+        </div>
+        <div class="pb-10">
+          <button type="button" class="btn btn-lg hover:shadow-form rounded-md bg-[#6B8054] py-3 px-8 text-base font-semibold text-white outline-none" onclick="writeReview()">
+            Submit Review
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="fixed left-0 w-full bottom-0">
+
+    <div class="container flex justify-between bg-[#C2C5B1] mx-auto py-4 px-5 space-x-5 flex-auto">
+      <a href="">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="44"
+          height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 12l14 0" />
+          <path d="M5 12l4 4" />
+          <path d="M5 12l4 -4" />
+        </svg>
+      </a>
+
+      <a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="32" height="32"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
+          <path d="M9 4v13" />
+          <path d="M15 7v5.5" />
+          <path
+            d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
+          <path d="M19 18v.01" />
+        </svg>
+      </a>
+
+
+      <a href="">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="32" height="32"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="#1e293b " fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+          <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+          <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+        </svg>
+      </a>
+    </div>
+
+  </footer>
+  <!-- JavaScript functions start here -->
+  <script src="./scripts/firebaseAPI_DTC02.js"></script>
+  <script src="./scripts/review.js"></script>
+
+</body>
+
+</html>
