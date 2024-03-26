@@ -60,62 +60,20 @@
 
 <body class="max-w-sm mx-auto">
 
-  <nav id="navbarPlaceholder" class="flex justify-center flex-auto">
-    <h1 class="text-center p-3 text-2xl font-sourceSerif font-bold text-slate-800 py-4 px-5 space-x-5">Neighbourly
-    </h1>
-  </nav>
+  <div id="headerPlaceholder"></div>
+
+  <!-- Map -->
+
   <div class="h-screen overflow-hidden" id="map"></div>
 
+  <!-- Footer -->
 
-
-  <!-- nav bar goes below -->
-  <footer class="fixed left-0 w-full bottom-0">
-
-    <div class="container flex justify-between bg-[#C2C5B1] mx-auto py-4 px-5 space-x-5 flex-auto">
-      <a href="">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left" width="44"
-          height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M5 12l14 0" />
-          <path d="M5 12l4 4" />
-          <path d="M5 12l4 -4" />
-        </svg>
-      </a>
-
-      <a>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="32" height="32"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
-          <path d="M9 4v13" />
-          <path d="M15 7v5.5" />
-          <path
-            d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
-          <path d="M19 18v.01" />
-        </svg>
-      </a>
-
-
-      <a href="">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="32" height="32"
-          viewBox="0 0 24 24" stroke-width="1.5" stroke="#1e293b " fill="none" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-          <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-          <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-        </svg>
-      </a>
-    </div>
-
-  </footer>
+  <div id="footerPlaceholder"></div>
 
   <!-- JavaScript functions goes below -->
   <script src="./scripts/firebaseAPI_DTC02.js"></script>
   <script src="./scripts/map_api.js"></script>
-
+  <script src="./scripts/skeleton.js"></script>
 </body>
 
 </html>
