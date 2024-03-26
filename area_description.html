@@ -307,16 +307,33 @@
 
       </div>
     </div>
-
-
-
   </content>
 
+  <div class="container">
+    <h2>Reviews:</h2>
+    <div id="details-go-here"></div>
+    <!-- Here is the container for cards with horizontal scrolling -->
+    <div class="card-container">
+      <div id="reviewCardGroup" class="row row-cols-auto">
+        <!-- Add your card templates here -->
+      </div>
+    </div>
+  </div>
 
-  <!--Navbar goes here-->
+  <!-- reviews will be populated here for each neighbourhood -->
+  <template id="reviewCardTemplate">
+    <div class="card bg-secondary">
+      <img class="card-img-top">
+      <div class="card-body bg-light">
+        <h5 class="title">placeholder</h5>
+        <p class="time">placeholder</p>
+        <br>
+        <p class="description">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </template>
 
-
-
+  <!--Our Footer Navbar goes below-->
   <footer class="fixed left-0 w-full bottom-0">
 
     <div class="container flex justify-between bg-[#C2C5B1] mx-auto py-4 px-5 space-x-5 flex-auto">
@@ -361,7 +378,7 @@
   </footer>
 
   <script src="./scripts/firebaseAPI_DTC02.js"></script>
-  <!-- <script src="./scripts/skeleton.js"></script> -->
+  <script src="./scripts/area_description.js"></script>
   <script src="./scripts/main.js"></script>
   <script src="./scripts/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
