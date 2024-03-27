@@ -42,6 +42,6 @@ function writeReview() {
     });
   } else {
     console.log("No user is signed in");
-    window.location.href = 'review.html';
+    window.location.href = 'reviews.html';
   }
 }
