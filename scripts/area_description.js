@@ -1,57 +1,33 @@
 function displayNeighbourhoodInfo() {
   let params = new URL(window.location.href); //get the url of search bar
   let ID = params.searchParams.get("docID"); //get value for key "id"
-  console.log(ID);
+  console.log("id", ID);
 
-  db.collection("neighbourhoods")
+  db.collection("neighbourhood_info")
     .doc(ID)
     .get()
     .then(doc => {
       thisNeighbourhood = doc.data();
       neighbourhoodCode = thisNeighbourhood.code;
-      neighbourhoodName = doc.data().name;
+      neighbourhoodName = doc.data().title;
 
-      document.getElementById("neighbourhoodName").innerHTML = neighbourhoodName;
+      console.log(thisNeighbourhood);
+      console.log(thisNeighbourhood.description);
+
+      console.log
+      console.log("description", document.getElementById("description"))
+
+      document.getElementById("description").innerHTML = thisNeighbourhood.description;
+      document.getElementById("title").innerHTML = thisNeighbourhood.title;
+      document.getElementById("tag1").innerHTML = thisNeighbourhood.tag1;
+      document.getElementById("tag2").innerHTML = thisNeighbourhood.tag2;
+      document.getElementById("tag3").innerHTML = thisNeighbourhood.tag3;
+      document.getElementById("biker_score").innerHTML = thisNeighbourhood.biker_score;
+      document.getElementById("transit_score").innerHTML = thisNeighbourhood.biker_score;
+      document.getElementById("walker_score").innerHTML = thisNeighbourhood.biker_score;
+      document.getElementById("safety_score").innerHTML = thisNeighbourhood.biker_score;
+      document.getElementById("park_score").innerHTML = thisNeighbourhood.biker_score;
+
     });
 }
-displayNeighbourhoodInfo();
-
-function saveNeighbourhoodDocumentIDAndRedirect() {
-  let params = new URL(window.location.href) //get the url from the search bar
-  let ID = params.searchParams.get("docID");
-  localStorage.setItem('neighbourhoodDocID', ID);
-  window.location.href = 'review.html';
-}
-
-function populateReviews() {
-  console.log("test");
-  let neighbourhoodCardTemplate = document.getElementById("reviewCardTemplate");
-  let neighbourhoodCardGroup = document.getElementById("reviewCardGroup");
-
-  let params = new URL(window.location.href); // get the url from the search bar
-  let neighbourhoodID = params.searchParams.get("docID");
-
-  db.collection("reviews")
-    .where("neighbourhoodDocID", "==", neighbourhoodID)
-    .get()
-    .then((allReviews) => {
-      reviews = allReviews.docs;
-      console.log(reviews);
-      reviews.forEach((doc) => {
-        var title = doc.data().title;
-        var description = doc.data().description;
-        var time = doc.data().timestamp.toDate();
-
-        console.log(time);
-
-        let reviewCard = neighbourhoodCardTemplate.content.cloneNode(true);
-        reviewCard.querySelector(".title").innerHTML = title;
-        reviewCard.querySelector(".time").innerHTML = new Date(
-          time
-        ).toLocaleString();
-        reviewCard.querySelector(".description").innerHTML = `Description: ${description}`;
-      });
-    });
-}
-
-populateReviews();
+displayNeighbourhoodInfo()
