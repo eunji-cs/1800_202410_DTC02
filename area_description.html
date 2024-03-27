@@ -67,27 +67,17 @@
     <div class="max-w-xs rounded overflow-hidden shadow-lg justify-center mx-auto">
       <img class="w-full" src="https://vancouver.ca/images/cov/feature/kitsilano-landing.jpg" alt="">
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Kitsilano</div>
-        <p class="text-gray-700 text-base">
-          Kitsilano, known locally as Kits, is synonymous with famous Kits Beach—named one of the "top 10 best city
-          beaches
-          in the
-          world" by international travel magazines, and perfect for outdoor fitness. Kitsilano is one of the city's
-          organic-food
-          hubs, and has extensive restaurants and retail along West 4th Avenue and West Broadway. Kitsilano runs along
-          the
-          south
-          shore of English Bay, between popular Granville Island and Point Grey
+        <div id="title" class="font-bold text-xl mb-2"></div>
+        <p id="description" class="text-gray-700 text-base">
         </p>
       </div>
       <div class="px-6 pt-4 pb-2">
-        <span
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Bikers</span>
-        <span
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Walker</span>
-        <span
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Excellent
-          transit</span>
+        <span id="tag1"
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"></span>
+        <span id="tag2"
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"></span>
+        <span id="tag3"
+          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"></span>
       </div>
     </div>
 
@@ -150,8 +140,12 @@
                     </div>
                   </td>
                   <td class="py-3 text-sm" role="cell">
-                    <p class="text-md font-medium text-gray-600 dark:text-white">
-                      98
+
+
+                    <!-- biker_score will be displayed -->
+
+                    <p id="biker_score" class="text-md font-medium text-gray-600 dark:text-white">
+
                     </p>
                   </td>
                   <td class="py-3 text-sm" role="cell">
@@ -181,14 +175,16 @@
                           <path d="M12 5l0 5" />
                         </svg>
                       </div>
+
                       <p class="text-sm font-medium text-navy-700 dark:text-white">
                         Transit
                       </p>
                     </div>
                   </td>
+                  <!-- transit_score will be displayed -->
                   <td class="py-3 text-sm" role="cell">
-                    <p class="text-md font-medium text-gray-600 dark:text-white">
-                      88
+                    <p id="transit_score" class="text-md font-medium text-gray-600 dark:text-white">
+
                     </p>
                   </td>
                   <td class="py-3 text-sm" role="cell">
@@ -221,8 +217,9 @@
                     </div>
                   </td>
                   <td class="py-3 text-sm" role="cell">
-                    <p class="text-md font-medium text-gray-600 dark:text-white">
-                      90
+                    <!-- walker_score will be displayed -->
+                    <p id="walker_score" class="text-md font-medium text-gray-600 dark:text-white">
+
                     </p>
                   </td>
                   <td class="py-3 text-sm" role="cell">
@@ -252,9 +249,10 @@
                       </p>
                     </div>
                   </td>
+                  <!-- safety_score will be displayed -->
                   <td class="py-3 text-sm" role="cell">
-                    <p class="text-md font-medium text-gray-600 dark:text-white">
-                      85
+                    <p id="safety_score" class="text-md font-medium text-gray-600 dark:text-white">
+
                     </p>
                   </td>
                   <td class="py-3 text-sm" role="cell">
@@ -286,9 +284,9 @@
                       </p>
                     </div>
                   </td>
+                  <!-- walker_score will be displayed -->
                   <td class="py-3 text-sm" role="cell">
-                    <p class="text-md font-medium text-gray-600 dark:text-white">
-                      80
+                    <p id="park_score" class="text-md font-medium text-gray-600 dark:text-white">
                     </p>
                   </td>
                   <td class="py-3 text-sm" role="cell">
