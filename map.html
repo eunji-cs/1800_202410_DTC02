@@ -52,6 +52,31 @@
             }
         });
 
+        // Add pop-ups to the neighborhoods layer (linked to each neighbourhood's description page)
+        map.on('click', 'vancouver-neighborhoods-layer', function (e) {
+            var neighborhoodName = e.features[0].properties.name;
+            var neighborhoodDescription = "Description for " + neighborhoodName;
+            
+            // Check if the clicked neighborhood matches our selected neighbourhoods
+            if (neighborhoodName === 'Kitsilano') {
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML('<a href="area_description.html?docID=bprC6bRxRkYyf6r81y3Q"><h3> Kitsilano </h3>')
+                    .addTo(map);
+            }
+            else if (neighborhoodName === 'Downtown') {
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML('<a href="area_description.html?docID=2e6D3dhk0IBgFlVuteA2"><h3> Downtown </h3>')
+                    .addTo(map);
+            }
+            else if (neighborhoodName === 'Killarney') {
+                new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML('<a href="area_description.html?docID=afTY38YSQkFf3zVpkmQ1"><h3> Killarney </h3>')
+                    .addTo(map);
+            }
+        });
     });
 </script>
 
