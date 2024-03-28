@@ -7,16 +7,16 @@ function displayListItemsDynamically(collection) {
 
             allItems.forEach(doc => {
                 // get database info
-                var name = doc.data().name;
+                var name = doc.data().title;
 
-                console.log(doc.data().name)
+                console.log(doc.data().title)
 
                 let newItem = itemTemplate.content.cloneNode(true); // Clone html.
 
                 newItem.querySelector('#neighbourhood-name-goes-here').innerHTML = name;
 
 
-                document.getElementById("neighbourhoods-go-here").appendChild(newItem);
+                document.getElementById("cards-go-here").appendChild(newItem);
             })
 
 
