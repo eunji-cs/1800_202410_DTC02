@@ -18,13 +18,16 @@ function writeReview() {
   let neighbourhoodDescription = document.getElementById("message").value;
   let userName = document.getElementById("name").value;
   let userEmail = document.getElementById("email").value;
-
+  let params = new URL(window.location.href) //get the url from the search bar
+  let ID = params.searchParams.get("docID");
 
 
   var user = firebase.auth().currentUser;
   if (user) {
+    
     var currentUser = db.collection("users").doc(user.uid);
     var userID = user.uid;
+    
 
     // currentUser.get().then(userDoc => {
     //   console.log(userDoc.data().name);
@@ -32,7 +35,7 @@ function writeReview() {
 
     // get the document for the current user.
     db.collection("reviews").add({
-      // neighbourhoodDocID: neighbourhoodDocID,
+      neighbourhoodDocID: ID,
       userID: userID,
       userName: userName,
       userEmail: userEmail,
