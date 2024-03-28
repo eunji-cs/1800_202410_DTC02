@@ -10,10 +10,7 @@ function getNameFromAuth() {
       console.log(user.displayName);
       userName = user.displayName;
 
-      $("#name-goes-here").text(userName);
-
-
-      document.querySelector("#name-goes-here").innerText = userName
+      // $("#name-goes-here").text(userName);
 
     } else {
       // No user is signed in.
